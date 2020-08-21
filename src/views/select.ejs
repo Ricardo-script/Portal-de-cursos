@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Seleção Notícia</title>
+</head>
+<body>
+    <head>
+        <img src="./logo.png" width="70%">
+        <ul>
+            <li><a href="/noticias">Visualizar todas</a></li>
+            <li><a href="/cadastro">Cadastrar cursos</a></li>
+            <li><a href="/">Home</a></li>
+        </ul>
+        <h1>Detalhes do Curso</h1><hr>
+    </head>
+
+    <div id="container">
+        <nav>
+            <span id="autor"><%=id[0].autor%></span>
+            <span id="titulo"><%=id[0].titulo%></span>
+            <span id="descricao"><%=id[0].noticia%></span>
+            <span id="resumo"><%=id[0].resumo%></span>
+            <span id="data"><%=id[0].data_noticia%></span>
+        </nav>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Todos os Cursos</title>
+</head>
+<body>
+    <head>
+        <img src="./logo.png" width="70%">
+        <ul>
+            <li><a href="/noticias">Visualizar todas</a></li>
+            <li><a href="/cadastro">Cadastrar cursos</a></li>
+            <li><a href="/">Home</a></li>
+        </ul> 
+    </head>
+
+    <div id="container">
+        <% if(noticias.length > 0){ %> 
+            <% for(var i=0; i<noticias.length; i++){ %> 
+                <nav>
+                    <span id="autor"><%=noticias[i].autor%></span>
+                    <span id="titulo"><a href="select?id_noticia=<%=noticias[i].id_noticia%>"><%=noticias[i].titulo%></a></span>
+                    <span id="descricao"><%=noticias[i].noticia%></span>
+                    <span id="resumo"><%=noticias[i].resumo%></span>
+                    <span id="data"><%=noticias[i].data_noticia%></span>
+                </nav>
+            <% } %>
+        <% } %> 
+    </div>
+
+</body>
+</html>

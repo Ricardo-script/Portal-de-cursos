@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Home</title>
+</head>
+<body>
+    <head>
+        <img src="./logo.png" width="70%">
+        <ul>
+            <li><a href="/noticias">Visualizar todas</a></li>
+            <li><a href="/cadastro">Cadastrar cursos</a></li>
+            <li><a href="/">Home</a></li>
+        </ul> 
+    </head>
+
+    <div id="container">
+        <% if(cinco.length >0){ %> 
+            <% for(var i=0; i<cinco.length; i++){ %> 
+                <nav>
+                    <span id="autor"><%=cinco[i].autor%></span>
+                    <span id="titulo"><a href="select?id_noticia=<%=cinco[i].id_noticia%>"><%=cinco[i].titulo%></a></span>
+                    <span id="resumo"><%=cinco[i].resumo%></span>
+                </nav>
+            <% } %> 
+        <% } %> 
+    </div>
+
+</body>
+</html>
